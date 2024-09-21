@@ -1,19 +1,30 @@
 function getComputerChoice() {
-  let choice = Math.random();
+  const options = ["rock", "paper", "scissors"];
+  const choiceIndex = Math.floor(Math.random());
 
-  if (choice <= 0.33) {
-    console.log("rock");
-  } else if (choice > 0.33 && choice < 0.66) {
-    console.log("paper");
-  } else if (choice >= 0.66) {
-    console.log("scissors");
-  }
+  return choiceIndex;
 }
 
 function getHumanChoice() {
   return prompt("Select rock, paper or scissors");
 }
 
-console.log(getComputerChoice());
+function playRound(humanChoice, computerChoice) {
+  humanChoice.toLower();
 
-console.log(getHumanChoice());
+  // if (humanChoice === "rock"){
+  //     if (computerChoice === "rock") {
+  //         console.log("You tie!")
+  //     }
+  //     else if (computerChoice === "paper") {
+  //         console.log("You win! Rock beats paper!")
+  //     }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+let humanScore = 0;
+let computerScore = 0;
+
+console.log(getComputerChoice());
